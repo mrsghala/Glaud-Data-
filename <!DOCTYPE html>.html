@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Glaud Data — Data Skills That Matter</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- خطوط Maragsa و Alice -->
+<link href="https://fonts.googleapis.com/css2?family=Alice&family=Maragsa&display=swap" rel="stylesheet">
+
+<!-- خط DM Serif Display -->
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg-dark:#212129;
+  --card-bg: rgba(50,57,73,0.6);
+  --title:#F3E6B8;
+  --text:#d6d6d6;
+  --accent:#D6E6F3;
+  --gradient: linear-gradient(135deg,#323949,#212129);
+  --glass-blur:blur(12px);
+}
+
+/* الخطوط */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+h1,h2{font-family:'Maragsa', serif;}
+header p{font-family:'Alice', serif;}
+
+/* تطبيق خط DM Serif Display فقط على العناصر ذات اللون #F3E6B8 */
+header h1,
+.split-left h2,
+.split-right h2,
+.tools h2,
+.tool h4,
+.contact h2,
+.modal-content h3,
+.about-box h2{
+  font-family:'DM Serif Display', serif;
+}
+
+body{background: var(--bg-dark);color:var(--text);line-height:1.7;scroll-behavior:smooth;}
+a{text-decoration:none;color:inherit;}
+
+header{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background: var(--gradient);
+  text-align:center;
+  padding:0 20px;
+}
+header h1{font-size:4rem;color:var(--title);margin-bottom:15px;}
+header p{font-size:1.5rem;color:var(--accent);}
+
+.split-section{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+  padding:80px 20px;
+  gap:40px;
+}
+.split-left, .split-right{
+  flex:1;
+  min-width:300px;
+  background: var(--card-bg);
+  padding:40px;
+  border-radius:20px;
+  backdrop-filter: var(--glass-blur);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.split-left:hover, .split-right:hover{transform: translateY(-8px); box-shadow:0 12px 30px rgba(0,0,0,0.6);}
+.split-left h2,.split-right h2{color:var(--title);margin-bottom:20px;}
+.split-left p,.split-right p{font-size:16px;line-height:1.6;}
+
+.tools{padding:80px 20px;text-align:center;}
+.tools h2{color:var(--title);margin-bottom:60px;font-size:2.2rem;}
+.tools-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  gap:30px;
+  justify-items:center;
+}
+
+.tool{
+  width:150px;
+  height:180px;
+  background: var(--card-bg);
+  border-radius:20px;
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  backdrop-filter: var(--glass-blur);
+}
+.tool:hover{transform:translateY(-10px);box-shadow:0 15px 25px rgba(0,0,0,0.6);}
+.tool img{width:60px;height:60px;margin-bottom:12px;object-fit:contain;}
+.tool h4{color:var(--title);font-size:14px;}
+.tool span{font-size:12px;opacity:0.85;margin-top:5px;}
+
+.contact{padding:80px 20px;text-align:center;}
+.contact h2{color:var(--title);margin-bottom:30px;font-size:2rem;}
+.fake-email{
+  display:inline-block;
+  padding:18px 25px;
+  border:1px solid var(--accent);
+  border-radius:15px;
+  backdrop-filter: var(--glass-blur);
+  opacity:0.8;
+  font-size:16px;
+}
+
+.modal{position:fixed;inset:0;background: rgba(0,0,0,.75);display:none;align-items:center;justify-content:center;z-index:99;}
+.modal-content{background: var(--card-bg);padding:50px;border-radius:20px;text-align:center;max-width:450px;backdrop-filter: var(--glass-blur);}
+.modal-content h3{color:var(--title);margin-bottom:20px;}
+.modal-content p{font-size:14px;}
+.close{margin-top:30px;padding:10px 26px;background:none;border:1px solid var(--accent);color:var(--accent);cursor:pointer;border-radius:12px;}
+
+@media(max-width:900px){.split-section{flex-direction:column;}}
+.about-box {
+  max-width:900px;
+  margin:60px auto;
+  background: rgba(50,57,73,0.6);
+  padding:50px 40px;
+  border-radius:25px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+  text-align:center;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.about-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.6);
+}
+.about-box h2 {
+  font-size:2rem;
+  margin-bottom:25px;
+}
+.about-box p {
+  font-size:16px;
+  line-height:1.6;
+  margin-bottom:15px;
+  color:#d6d6d6;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Glaud Data</h1>
+  <p>Data Skills That Matter</p>
+</header>
+
+<section class="about-box">
+  <h2 style="color:#F3E6B8;">ABOUT US</h2>
+  <p>
+  Glaud is a professional workspace created to unify the fragmented data ecosystem. Our goal is to simplify the data journey by providing a streamlined space for everything a user needs, making it easier to process data and transform numbers into actionable insights with minimal effort. At Glaud, we don’t just offer tools; we build an integrated environment where data skills become a tangible power.
+  </p>
+  <p>
+    منصة قلاود هي بيئة عمل احترافية وُجدت لإنهاء تشتت أدوات البيانات وتوحيدها في مكان واحد. هدفنا هو تسهيل رحلة التعامل مع البيانات عبر توفير مساحة تجمع كل ما يحتاجه المستخدم، مما يسهل عملية المعالجة وتحويل الأرقام إلى قرارات واقعية بأقل جهد ممكن. في قلاود لا نقدم مجرد أدوات، بل نبني بيئة متكاملة تجعل من مهارات البيانات قوة ملموسة
+  </p>
+</section>
+
+<section class="tools">
+  <h2>Integrated Data Applications</h2>
+  <div class="tools-grid">
+    <div class="tool" onclick="openApp('Excel')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Microsoft_Excel_2013-2019_logo.svg">
+      <h4>Excel</h4>
+      <span>Data Tables</span>
+    </div>
+
+    <div class="tool" onclick="openApp('MySQL')">
+      <img src="https://upload.wikimedia.org/wikipedia/en/d/dd/MySQL_logo.svg">
+      <h4>MySQL</h4>
+      <span>Database Queries</span>
+    </div>
+
+    <div class="tool" onclick="openApp('Python')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg">
+      <h4>Python</h4>
+      <span>Data Analysis</span>
+    </div>
+
+    <div class="tool" onclick="openApp('Power BI')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg">
+      <h4>Power BI</h4>
+      <span>Business Reports</span>
+    </div>
+
+    <div class="tool" onclick="openApp('Tableau')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Tableau_Logo.png">
+      <h4>Tableau</h4>
+      <span>Visual Insights</span>
+    </div>
+
+    <div class="tool" onclick="openApp('PostgreSQL')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg">
+      <h4>PostgreSQL</h4>
+      <span>Relational DB</span>
+    </div>
+
+    <div class="tool" onclick="openApp('Grafana')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Grafana_logo.svg">
+      <h4>Grafana</h4>
+      <span>Data Dashboards</span>
+    </div>
+  </div>
+</section>
+
+<div id="appModal" class="modal">
+  <div class="modal-content" style="max-width:500px;">
+    <h3 id="appTitle"></h3>
+    <p id="appMessage"></p>
+    <button class="close" onclick="closeApp()">Close</button>
+  </div>
+</div>
+
+<script>
+const appLinks = {
+  "Excel": "https://office.live.com/start/Excel.aspx",
+  "MySQL": "https://www.phpmyadmin.net/",
+  "Python": "https://colab.research.google.com/",
+  "Power BI": "https://app.powerbi.com/",
+  "Tableau": "https://public.tableau.com/app/profile/tableau",
+  "PostgreSQL": "https://pgadmin.org/",
+  "Grafana": "https://grafana.com/",
+  "Storytelling": "https://www.storytellingwithdata.com/"
+};
+
+function openApp(appName){
+  const url = appLinks[appName];
+  if(url){
+    window.open(url, "_blank");
+  }
+}
+
+function closeApp(){
+  document.getElementById('appModal').style.display = 'none';
+}
+</script>
+
+<section class="contact" style="margin-top:140px; padding:40px 20px; text-align:center;">
+  <h2 style="color:#F3E6B8; font-size:28px; margin-bottom:15px;">Contact Us</h2>
+  <hr style="border:none; height:2px; background-color:#ECD9DE; width:60px; margin:0 auto 30px; border-radius:2px;">
+  <div style="display:inline-flex; align-items:center; gap:8px;">
+    <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png"
+         style="width:20px; filter: brightness(0) saturate(100%) invert(86%) sepia(8%) saturate(552%) hue-rotate(180deg) brightness(96%) contrast(93%);">
+    <a href="mailto:GLAUDDATA@outlook.com" style="color:#D6E6F3; font-size:14px; font-weight:500; text-decoration:none;">
+      GLAUDDATA@outlook.com
+    </a>
+  </div>
+</section>
+
+</body>
+</html>
