@@ -139,6 +139,71 @@ header p{font-size:1.5rem;color:var(--accent);}
 @media(max-width:900px){
   header h1{font-size:3rem;}
 }
+  /* ===== Contact Section ===== */
+
+.contact {
+  margin-top: 140px;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  color: #F3E6B8;
+  font-size: 24px;
+  margin-bottom: 35px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+/* Wrapper */
+.email-wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Email Icon PNG */
+.email-icon {
+  width: 20px;
+  opacity: 0.85;
+  transition: all 0.3s ease;
+
+  /* هذا يحول الأسود إلى لون #D6E6F3 تقريبًا */
+  filter: brightness(0) saturate(100%) 
+          invert(90%) sepia(8%) 
+          saturate(300%) hue-rotate(175deg) 
+          brightness(95%) contrast(92%);
+}
+
+.email-wrapper:hover .email-icon {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+/* Tooltip */
+.tooltip-email {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  transform: translateX(-50%) translateY(5px);
+  background: #1c1c1c;
+  color: #D6E6F3;
+  padding: 7px 14px;
+  font-size: 12px;
+  border-radius: 8px;
+  border: 1px solid #ECD9DE;
+  opacity: 0;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  letter-spacing: 0.5px;
+}
+
+/* Show Tooltip */
+.email-wrapper:hover .tooltip-email {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
 </style>
 </head>
 <body>
@@ -236,16 +301,13 @@ header p{font-size:1.5rem;color:var(--accent);}
 </div>
 </section>
 
-<section class="contact" style="margin-top:140px; padding:40px 20px; text-align:center;">
-  <h2 style="color:#F3E6B8; font-size:28px; margin-bottom:15px;">Contact Us</h2>
-  <hr style="border:none; height:2px; background-color:#ECD9DE; width:60px; margin:0 auto 30px; border-radius:2px;">
-  <div style="display:inline-flex; align-items:center; gap:8px;">
-    <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png"
-         style="width:20px; filter: brightness(0) saturate(100%) invert(86%) sepia(8%) saturate(552%) hue-rotate(180deg) brightness(96%) contrast(93%);">
-    <a href="mailto:GLAUDDATA@outlook.com" style="color:#D6E6F3; font-size:14px; font-weight:500; text-decoration:none;">
-      GLAUDDATA@outlook.com
-    </a>
+<section class="contact">
+  <h2>Contact US</h2>
+  <div class="email-wrapper">
+    <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" class="email-icon">
+    <span class="tooltip-email">GLAUDDATA@outlook.com</span>
   </div>
+</section>
 </section>
 
 </body>
