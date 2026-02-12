@@ -5,10 +5,7 @@
 <title>Glaud Data — Data Skills That Matter</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- خطوط Maragsa و Alice -->
 <link href="https://fonts.googleapis.com/css2?family=Alice&family=Maragsa&display=swap" rel="stylesheet">
-
-<!-- خط DM Serif Display -->
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
 
 <style>
@@ -22,19 +19,14 @@
   --glass-blur:blur(12px);
 }
 
-/* الخطوط */
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
 h1,h2{font-family:'Maragsa', serif;}
 header p{font-family:'Alice', serif;}
 
-/* تطبيق خط DM Serif Display فقط على العناصر ذات اللون #F3E6B8 */
 header h1,
-.split-left h2,
-.split-right h2,
 .tools h2,
-.tool h4,
+.tool-card h4,
 .contact h2,
-.modal-content h3,
 .about-box h2{
   font-family:'DM Serif Display', serif;
 }
@@ -55,99 +47,97 @@ header{
 header h1{font-size:4rem;color:var(--title);margin-bottom:15px;}
 header p{font-size:1.5rem;color:var(--accent);}
 
-.split-section{
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  justify-content:space-between;
-  padding:80px 20px;
-  gap:40px;
-}
-.split-left, .split-right{
-  flex:1;
-  min-width:300px;
-  background: var(--card-bg);
-  padding:40px;
-  border-radius:20px;
-  backdrop-filter: var(--glass-blur);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-.split-left:hover, .split-right:hover{transform: translateY(-8px); box-shadow:0 12px 30px rgba(0,0,0,0.6);}
-.split-left h2,.split-right h2{color:var(--title);margin-bottom:20px;}
-.split-left p,.split-right p{font-size:16px;line-height:1.6;}
-
-.tools{padding:80px 20px;text-align:center;}
-.tools h2{color:var(--title);margin-bottom:60px;font-size:2.2rem;}
-.tools-grid{
-  display:grid;
-  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
-  gap:30px;
-  justify-items:center;
-}
-
-.tool{
-  width:150px;
-  height:180px;
-  background: var(--card-bg);
-  border-radius:20px;
-  padding:20px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  cursor:pointer;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  backdrop-filter: var(--glass-blur);
-}
-.tool:hover{transform:translateY(-10px);box-shadow:0 15px 25px rgba(0,0,0,0.6);}
-.tool img{width:60px;height:60px;margin-bottom:12px;object-fit:contain;}
-.tool h4{color:var(--title);font-size:14px;}
-.tool span{font-size:12px;opacity:0.85;margin-top:5px;}
-
-.contact{padding:80px 20px;text-align:center;}
-.contact h2{color:var(--title);margin-bottom:30px;font-size:2rem;}
-.fake-email{
-  display:inline-block;
-  padding:18px 25px;
-  border:1px solid var(--accent);
-  border-radius:15px;
-  backdrop-filter: var(--glass-blur);
-  opacity:0.8;
-  font-size:16px;
-}
-
-.modal{position:fixed;inset:0;background: rgba(0,0,0,.75);display:none;align-items:center;justify-content:center;z-index:99;}
-.modal-content{background: var(--card-bg);padding:50px;border-radius:20px;text-align:center;max-width:450px;backdrop-filter: var(--glass-blur);}
-.modal-content h3{color:var(--title);margin-bottom:20px;}
-.modal-content p{font-size:14px;}
-.close{margin-top:30px;padding:10px 26px;background:none;border:1px solid var(--accent);color:var(--accent);cursor:pointer;border-radius:12px;}
-
-@media(max-width:900px){.split-section{flex-direction:column;}}
 .about-box {
   max-width:900px;
   margin:60px auto;
-  background: rgba(50,57,73,0.6);
+  background: var(--card-bg);
   padding:50px 40px;
   border-radius:25px;
   backdrop-filter: blur(12px);
   box-shadow: 0 8px 30px rgba(0,0,0,0.5);
   text-align:center;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
-.about-box:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 35px rgba(0,0,0,0.6);
+.about-box h2 {font-size:2rem;margin-bottom:25px;color:var(--title);}
+.about-box p {font-size:16px;line-height:1.6;margin-bottom:15px;}
+
+.tools{padding:80px 20px;text-align:center;}
+.tools h2{color:var(--title);margin-bottom:40px;font-size:2.2rem;}
+
+.filters{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  margin-bottom:60px;
+  flex-wrap:wrap;
 }
-.about-box h2 {
-  font-size:2rem;
-  margin-bottom:25px;
+
+.filter-btn{
+  padding:10px 22px;
+  border-radius:25px;
+  border:1px solid var(--accent);
+  background:transparent;
+  color:var(--accent);
+  cursor:pointer;
+  transition:0.3s ease;
+  font-size:14px;
 }
-.about-box p {
-  font-size:16px;
-  line-height:1.6;
+
+.filter-btn.active,
+.filter-btn:hover{
+  background:var(--accent);
+  color:var(--bg-dark);
+}
+
+.tools-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap:35px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.tool-card{
+  background:var(--card-bg);
+  border-radius:25px;
+  padding:30px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition:0.4s ease;
+  backdrop-filter:var(--glass-blur);
+  min-height:240px;
+}
+
+.tool-card:hover{
+  transform:translateY(-12px);
+  box-shadow:0 18px 40px rgba(0,0,0,0.6);
+}
+
+.tool-card img{
+  width:60px;
+  height:60px;
   margin-bottom:15px;
-  color:#d6d6d6;
+  object-fit:contain;
+}
+
+.tool-card h4{
+  color:var(--title);
+  margin-bottom:6px;
+  font-size:17px;
+}
+
+.tool-card span{
+  font-size:13px;
+  opacity:0.85;
+}
+
+.contact{padding:100px 20px;text-align:center;}
+.contact h2{color:var(--title);margin-bottom:20px;font-size:2rem;}
+
+@media(max-width:900px){
+  header h1{font-size:3rem;}
 }
 </style>
 </head>
@@ -157,6 +147,7 @@ header p{font-size:1.5rem;color:var(--accent);}
   <h1>Glaud Data</h1>
   <p>Data Skills That Matter</p>
 </header>
+
 
 <section class="about-box">
   <h2 style="color:#F3E6B8;">ABOUT US</h2>
@@ -170,82 +161,81 @@ header p{font-size:1.5rem;color:var(--accent);}
 
 <section class="tools">
   <h2>Integrated Data Tools</h2>
+
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="analysis">Analysis</button>
+    <button class="filter-btn" data-filter="visualization">Visualization</button>
+    <button class="filter-btn" data-filter="databases">Databases</button>
+    <button class="filter-btn" data-filter="statistics">Statistical Analysis</button>
+  </div>
+
   <div class="tools-grid">
-    <div class="tool" onclick="openApp('Excel')">
+
+    <!-- Analysis -->
+    <div class="tool-card" data-category="analysis statistics" onclick="openApp('Excel')">
       <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Microsoft_Excel_2013-2019_logo.svg">
       <h4>Excel</h4>
       <span>Data Analysis</span>
     </div>
 
-    <div class="tool" onclick="openApp('MySQL')">
-      <img src="https://upload.wikimedia.org/wikipedia/en/d/dd/MySQL_logo.svg">
-      <h4>MySQL</h4>
-      <span>Relational Database</span>
-    </div>
-
-    <div class="tool" onclick="openApp('Python')">
+    <div class="tool-card" data-category="analysis" onclick="openApp('Python')">
       <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg">
       <h4>Python</h4>
-      <span>Data Analysis</span>
+      <span>Data Processing</span>
     </div>
 
-    <div class="tool" onclick="openApp('Power BI')">
+    <!-- Visualization -->
+    <div class="tool-card" data-category="visualization" onclick="openApp('Power BI')">
       <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg">
       <h4>Power BI</h4>
       <span>Business Intelligence</span>
     </div>
 
-    <div class="tool" onclick="openApp('Tableau')">
+    <div class="tool-card" data-category="visualization" onclick="openApp('Tableau')">
       <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Tableau_Logo.png">
       <h4>Tableau</h4>
       <span>Data Visualization</span>
     </div>
 
-    <div class="tool" onclick="openApp('PostgreSQL')">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg">
-      <h4>PostgreSQL</h4>
-      <span>Data Database</span>
-    </div>
-
-    <div class="tool" onclick="openApp('Grafana')">
+    <div class="tool-card" data-category="visualization" onclick="openApp('Grafana')">
       <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Grafana_logo.svg">
       <h4>Grafana</h4>
-      <span>Real-Time Dashboatds</span>
+      <span>Real-Time Dashboards</span>
     </div>
-  </div>
-</section>
 
-<div id="appModal" class="modal">
-  <div class="modal-content" style="max-width:500px;">
-    <h3 id="appTitle"></h3>
-    <p id="appMessage"></p>
-    <button class="close" onclick="closeApp()">Close</button>
-  </div>
+    <!-- Databases -->
+    <div class="tool-card" data-category="databases" onclick="openApp('MySQL')">
+      <img src="https://upload.wikimedia.org/wikipedia/en/d/dd/MySQL_logo.svg">
+      <h4>MySQL</h4>
+      <span>Relational Database</span>
+    </div>
+
+    <div class="tool-card" data-category="databases" onclick="openApp('PostgreSQL')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg">
+      <h4>PostgreSQL</h4>
+      <span>Advanced Database</span>
+    </div>
+
+    <!-- Statistical Analysis -->
+    <div class="tool-card" data-category="statistics" onclick="openApp('RStudio')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/RStudio_logo_flat.svg">
+      <h4>RStudio</h4>
+      <span>Statistical Computing</span>
+    </div>
+
+  <div class="tool-card" data-category="statistics" onclick="openApp('SPSS')">
+  <img src="images/spss.png.jpg">
+  <h4>SPSS</h4>
+  <span>Statistical Analysis</span>
 </div>
 
-<script>
-const appLinks = {
-  "Excel": "https://office.live.com/start/Excel.aspx",
-  "MySQL": "https://www.phpmyadmin.net/",
-  "Python": "https://colab.research.google.com/",
-  "Power BI": "https://app.powerbi.com/",
-  "Tableau": "https://public.tableau.com/app/profile/tableau",
-  "PostgreSQL": "https://pgadmin.org/",
-  "Grafana": "https://grafana.com/",
-  "Storytelling": "https://www.storytellingwithdata.com/"
-};
-
-function openApp(appName){
-  const url = appLinks[appName];
-  if(url){
-    window.open(url, "_blank");
-  }
-}
-
-function closeApp(){
-  document.getElementById('appModal').style.display = 'none';
-}
-</script>
+  <div class="tool-card" data-category="statistics" onclick="openApp('Minitab')">
+  <img src="images/minitab.png.jpg">
+  <h4>Minitab</h4>
+  <span>Statistical Modeling</span>
+</div>
+</section>
 
 <section class="contact" style="margin-top:140px; padding:40px 20px; text-align:center;">
   <h2 style="color:#F3E6B8; font-size:28px; margin-bottom:15px;">Contact Us</h2>
@@ -258,6 +248,52 @@ function closeApp(){
     </a>
   </div>
 </section>
+
+</body>
+</html>
+
+<script>
+const appLinks = {
+  "Excel": "https://office.live.com/start/Excel.aspx",
+  "MySQL": "https://www.phpmyadmin.net/",
+  "Python": "https://colab.research.google.com/",
+  "Power BI": "https://app.powerbi.com/",
+  "Tableau": "https://public.tableau.com/",
+  "PostgreSQL": "https://pgadmin.org/",
+  "Grafana": "https://grafana.com/",
+  "RStudio": "https://posit.co/download/rstudio-desktop/",
+  "SPSS": "https://www.ibm.com/products/spss-statistics",
+  "Minitab": "https://www.minitab.com/"
+};
+
+function openApp(appName){
+  const url = appLinks[appName];
+  if(url){
+    window.open(url, "_blank");
+  }
+}
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+const cards = document.querySelectorAll(".tool-card");
+
+filterButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    document.querySelector(".filter-btn.active").classList.remove("active");
+    button.classList.add("active");
+    const filter = button.getAttribute("data-filter");
+
+    cards.forEach(card => {
+      if(filter === "all"){
+        card.style.display = "flex";
+      } else {
+        card.style.display =
+          card.getAttribute("data-category").includes(filter)
+          ? "flex" : "none";
+      }
+    });
+  });
+});
+</script>
 
 </body>
 </html>
