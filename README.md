@@ -5,6 +5,8 @@ Glaud Data is a practical workspace designed to eliminate fragmentation between 
 ## Project Goal
 Our goal is to simplify the data journey — from cleaning, analysis, and processing, to visualization and storytelling — with less distraction and less effort.
 
+# https://mrsghala.github.io/Glaud-Data-/
+
 ## Tools & Technologies Used
 - Excel
 - Python
