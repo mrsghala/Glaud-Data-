@@ -1,19 +1,19 @@
-# 🟣 Glaud Data
+# ✦ Glaud Data
 
 Glaud Data is a practical workspace designed to eliminate fragmentation between data tools by unifying them in one place.
 
 ---
 
-## Project Goal
+## ✦ Project Goal
 Our goal is to simplify the data journey — from cleaning, analysis, and processing, to visualization and storytelling — with less distraction and less effort.
 
 ---
 
-## 🔗 View Project
+## ✦ View Project
 [Glaud Data Live Demo](https://mrsghala.github.io/Glaud-Data-/)
 
 ---
-## 🛠 Tools & Technologies Used
+## ✦ Tools & Technologies Used
 
 <p>
   <img src="https://img.shields.io/badge/Excel-217346?style=flat&logo=microsoft-excel&logoColor=white"/>
