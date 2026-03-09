@@ -31,8 +31,6 @@ Our goal is to simplify the data journey — from cleaning, analysis, and proces
 ---
 ## 👩🏻‍💻 Authors
 
-- **Ghala Althubaity** &nbsp; <a href="[https://www.linkedin.com/in/YOUR_USERNAME](https://www.linkedin.com/in/ghala-althubaity-86508b372?utm_source=share_via&utm_content=profile&utm_medium=member_ios)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="20" height="20"></a>
+- **Ghala Althubaity** &nbsp; <a href="https://www.linkedin.com/in/ghala-althubaity-86508b372"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="20" height="20"></a>
 
-<br>
-
-- **Jood Asaad** &nbsp; <a href="[https://www.linkedin.com/in/YOUR_USERNAME](https://www.linkedin.com/in/joud-al-a646133a4?utm_source=share_via&utm_content=profile&utm_medium=member_ios)"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="20" height="20"></a>
+- **Jood Asaad** &nbsp; <a href="https://www.linkedin.com/in/joud-al-a646133a4"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="20" height="20"></a>
