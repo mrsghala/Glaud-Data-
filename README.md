@@ -30,5 +30,8 @@ Our goal is to simplify the data journey — from cleaning, analysis, and proces
 
 ---
 ## 👩🏻‍💻 Authors
-- **Ghala Althubaity**  
-- **Jood Asaad**
+
+- **Ghala Althubaity** [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/YOUR_USERNAME_HERE)
+
+- **Jood Asaad** [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/YOUR_USERNAME_HERE)
+
