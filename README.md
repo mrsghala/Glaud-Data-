@@ -10,7 +10,7 @@ Our goal is to simplify the data journey — from cleaning, analysis, and proces
 ---
 
 ## ✦ View Project
-[Glaud Data Live Demo](https://mrsghala.github.io/Glaud-Data-/)
+[Glaud Data Live Demo](https://https://mrsghala.github.io/Glaud-Data/)
 
 ---
 ## ✦ Tools & Technologies Used
